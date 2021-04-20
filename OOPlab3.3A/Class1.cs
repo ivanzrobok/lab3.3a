@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OOPlab3._3A
 {
@@ -31,12 +32,30 @@ namespace OOPlab3._3A
             string firstCount = Console.ReadLine();
             Console.Write("Введіть друге число : ");
             string secondCount = Console.ReadLine();
-            if (Check(firstCount) && Check(secondCount))
+          
+           /* if (Check(firstCount) && Check(secondCount))
             {
                 First = long.Parse(firstCount);
                 Second = long.Parse(secondCount);
             }
-            else throw new Exception("Ви ввели неправильне число");
+            else throw new Exception("Ви ввели неправильне число");*/
+
+            try
+            {
+                First = long.Parse(firstCount);
+                Second = long.Parse(secondCount);
+            }
+            catch (Exception)
+            {             
+                Console.WriteLine("\a");//системний звук
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(MessageBox.Show("ВВЕДИ ЧИСЛО А НЕ STRING!!!!!!!"));        
+            }
+            finally
+            {        
+                Console.Beep();             
+            }
+
         }
         public virtual void Write()
         {

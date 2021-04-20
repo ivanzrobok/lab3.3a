@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OOPlab3.3A\OOPlab3.3A.csproj">
+    <ProjectReference Include="..\OOPlab3.3A\OOPlab5.1C.csproj">
       <Project>{9a98728e-025f-4200-ae2e-558d44521a5c}</Project>
-      <Name>OOPlab3.3A</Name>
+      <Name>OOPlab5.1C</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
